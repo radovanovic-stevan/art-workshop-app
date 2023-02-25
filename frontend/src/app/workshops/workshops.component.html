@@ -1,0 +1,23 @@
+
+
+<div class="inputs">
+    <input [(ngModel)]="naziv" type="text" placeholder="Naziv..."/>
+    <input [(ngModel)]="mesto" type="text" placeholder="Mesto..."/>
+    <button (click)="sortAndFilter()">Pretrazi</button>
+    
+    <button *ngIf="nameSorting==='default'" (click)="changeSort('asc')">Sort by Name ASC</button>
+    <button *ngIf="nameSorting==='asc'" (click)="changeSort('desc')">Sort by Name DESC</button>
+    <button *ngIf="nameSorting==='desc'" (click)="changeSort('default')">Sort by Name DEFAULT</button>
+
+</div>
+
+<div *ngFor="let workshop of filteredWorkshops">
+
+    <div class="wrap">
+        <h2>{{workshop.naziv}}</h2>
+        <p>{{workshop.opis}}</p>
+        <p>{{workshop.mesto}}</p>
+        <p>{{workshop.datum | date}}</p>
+    </div>
+
+</div>
