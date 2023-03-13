@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 app.use(multer({storage: multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null,'public');
@@ -22,6 +24,7 @@ mongoose.connect('mongodb://localhost:27017/piaProjekat');
 const connection = mongoose.connection;
 connection.once('open', ()=>{
     console.log('db connection ok')
+    console.log('steva')
 })
  
 const router = express.Router();
