@@ -26,9 +26,11 @@ export class LoginComponent implements OnInit{
           this.router.navigate(['/ucesnik']);
         }else {
           if(user.type==1){
+            localStorage.setItem('user',JSON.stringify({type: 'organizator'}));
             this.router.navigate(['/organizator']);
           }
         }
+        localStorage.setItem('user',JSON.stringify(user));
       }
       else this.message = "Bad data"
     })

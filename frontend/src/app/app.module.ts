@@ -22,6 +22,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkshopsComponent } from './workshops/workshops.component';
+import { MyWorkshopsComponent } from './my-workshops/my-workshops.component';
+import { CreateWorkshopComponent } from './create-workshop/create-workshop.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { WorkshopsComponent } from './workshops/workshops.component';
     OrganizatorComponent,
     HeaderComponent,
     FooterComponent,
-    WorkshopsComponent
+    WorkshopsComponent,
+    MyWorkshopsComponent,
+    CreateWorkshopComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
